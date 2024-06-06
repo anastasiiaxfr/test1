@@ -12,7 +12,7 @@
         <div class="container">
           <div>
             <h1>Lorem ipsum dolor sit amet.</h1>
-            <a href="#about" class="btn" rule="" button>Дізнатися більше</a>
+            <a href="#" class="btn" rule="button" onclick="scrollInto('about')">Дізнатися більше</a>
           </div>
           <div>
             <img src="http://via.placeholder.com/640x360" alt="" class="img" />
@@ -78,4 +78,14 @@
       </footer>
     </main>
   </body>
+  <script>
+    function scrollInto(id) {
+      var elmnt = document.getElementById(id);
+      elmnt.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  </script>
 </html>
